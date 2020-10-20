@@ -1,3 +1,4 @@
+using System;
 using Api.Data.Collections;
 using Api.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,22 @@ namespace Api.Controllers
             var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
 
             return Ok(infectados);
+        }
+
+        [HttpPut]
+        public ActionResult AtualizarInfectado([FromBody] InfectadoDto dto)
+        {
+            var infectados = _infectadosCollection.UpdateOne(Builders<Infectado>.Filter.Where(p => p.DataNascimento == dto.DataNascimento), Builders<Infectado>.Update.Set("sexo", dto.Sexo));
+
+            return StatusCode(200, "Infectado atualizado com sucesso");
+        }
+
+        [HttpDelete("{dataNasc}")]
+        public ActionResult DeleteInfectado(DateTime dataNasc)
+        {
+            var infectados = _infectadosCollection.DeleteOne(Builders<Infectado>.Filter.Where(p => p.DataNascimento == dataNasc));
+
+            return StatusCode(200, "Infectado Deletado  com sucesso");
         }
     }
 }

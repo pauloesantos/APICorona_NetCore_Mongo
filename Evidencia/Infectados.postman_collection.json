@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "211580d9-7be1-4307-90bc-0c06b73afe73",
+		"name": "Infectados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Infectados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/infectado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"infectado"
+					]
+				},
+				"description": "List Infectados"
+			},
+			"response": [
+				{
+					"name": "List Infectados",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/infectado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"infectado"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 20:19:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"dataNascimento\": \"1990-03-01T03:00:00Z\",\n        \"sexo\": \"M\",\n        \"localizacao\": {\n            \"values\": [\n                -46.6565712,\n                -23.5630991\n            ],\n            \"longitude\": -46.6565712,\n            \"latitude\": -23.5630991\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Infectados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DataNascimento\": \"1970-06-05\",\r\n    \"Sexo\" : \"M\",\r\n    \"Latitude\" : -30.5630991,\r\n    \"Longitude\" : -41.6565712\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/infectado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"infectado"
+					]
+				},
+				"description": "List Infectados"
+			},
+			"response": [
+				{
+					"name": "Post Infectados",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DataNascimento\": \"1990-03-01\",\r\n    \"Sexo\" : \"M\",\r\n    \"Latitude\" : -23.5630991,\r\n    \"Longitude\" : -46.6565712\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/infectado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"infectado"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 20:19:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Infectado adicionado com sucesso"
+				}
+			]
+		},
+		{
+			"name": "Put Infectados",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DataNascimento\": \"1990-03-01\",\r\n    \"Sexo\" : \"F\",\r\n    \"Latitude\" : -23.5630991,\r\n    \"Longitude\" : -46.6565712\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/infectado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"infectado"
+					]
+				},
+				"description": "List Infectados"
+			},
+			"response": [
+				{
+					"name": "Post Infectados",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DataNascimento\": \"1990-03-01\",\r\n    \"Sexo\" : \"M\",\r\n    \"Latitude\" : -23.5630991,\r\n    \"Longitude\" : -46.6565712\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/infectado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"infectado"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 20:19:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Infectado adicionado com sucesso"
+				}
+			]
+		},
+		{
+			"name": "Delete Infectados",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DataNascimento\": \"1990-03-01\",\r\n    \"Sexo\" : \"F\",\r\n    \"Latitude\" : -23.5630991,\r\n    \"Longitude\" : -46.6565712\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/infectado/1990-03-01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"infectado",
+						"1990-03-01"
+					]
+				},
+				"description": "List Infectados"
+			},
+			"response": [
+				{
+					"name": "Post Infectados",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DataNascimento\": \"1990-03-01\",\r\n    \"Sexo\" : \"M\",\r\n    \"Latitude\" : -23.5630991,\r\n    \"Longitude\" : -46.6565712\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/infectado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"infectado"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Oct 2020 20:19:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Infectado adicionado com sucesso"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
