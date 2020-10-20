@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
-namespace api
+namespace Api
 {
+    //senha bd: Wga9N20PNj90nkY1
+    //mongodb+srv://api:<password>@cluster0.8cew7.mongodb.net/<dbname>?retryWrites=true&w=majority
     public class Program
     {
         public static void Main(string[] args)
